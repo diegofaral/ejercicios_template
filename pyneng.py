@@ -33,7 +33,7 @@ task_dirs = [
     "24_oop_inheritance",
 ]
 
-
+print('teste')
 class PynengError(Exception):
     """
     Error in the use/operation of the pyneng script
@@ -183,10 +183,10 @@ def copy_answers(passed_tasks):
 
     homedir = pathlib.Path.home()
     os.chdir(homedir)
-    if os.path.exists("pyneng-answers"):
-        shutil.rmtree("pyneng-answers", onerror=remove_readonly)
+    if os.path.exists("pyneng-answers-en"):
+        shutil.rmtree("pyneng-answers-en", onerror=remove_readonly)
     returncode, stderr = call_command(
-        "git clone --depth=1 https://github.com/natenka/pyneng-answers",
+        "git clone --depth=1 https://github.com/natenka/pyneng-answers-en",
         verbose=False,
         return_stderr=True,
     )
