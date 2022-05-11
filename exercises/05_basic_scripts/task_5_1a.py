@@ -19,8 +19,7 @@ All tasks must be completed using only the topics covered. That is, this task ca
 solved without using the if condition.
 """
 
-equip= input('Enter device name :')
-param = input('Enter Parameter name :')
+
 
 london_co = {
     "r1": {
@@ -47,3 +46,10 @@ london_co = {
         "routing": True,
     },
 }
+
+device= input('Enter device name :')
+parameter = input('Enter Parameter name :')
+
+print(london_co[device][parameter])
+
+
